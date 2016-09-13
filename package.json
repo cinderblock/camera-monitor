@@ -6,6 +6,9 @@
   "scripts": {
     "webpack": "webpack"
   },
+  "config": {
+    "listen": 9001
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cinderblock/camera-monitor.git"
