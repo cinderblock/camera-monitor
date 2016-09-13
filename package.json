@@ -5,6 +5,7 @@
   "main": "babel/src/server.js",
   "scripts": {
     "dev": "babel-node src/server.js",
+    "main": "node .",
     "build": "babel src/server.js -d babel",
     "post-install": "npm run build",
     "webpack": "webpack"
