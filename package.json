@@ -2,7 +2,7 @@
   "name": "camera-monitor",
   "version": "0.0.0",
   "description": "A web interface for managing multiple network cameras",
-  "main": "babel/src/server.js",
+  "main": "src/server.js",
   "scripts": {
     "dev": "babel-node src/server.js",
     "main": "node .",
