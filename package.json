@@ -7,7 +7,7 @@
     "dev": "babel-node src/server.js",
     "main": "node .",
     "build": "babel src/server.js -d babel",
-    "post-install": "npm run build",
+    "postinstall": "npm run build",
     "webpack": "webpack"
   },
   "config": {
