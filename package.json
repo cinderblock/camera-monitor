@@ -4,6 +4,7 @@
   "description": "A web interface for managing multiple network cameras",
   "main": "src/server.js",
   "scripts": {
+    "run": "babel-node .",
     "webpack": "webpack"
   },
   "config": {
@@ -27,5 +28,9 @@
   "homepage": "https://github.com/cinderblock/camera-monitor#readme",
   "dependencies": {
     "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0"
   }
 }
