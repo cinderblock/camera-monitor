@@ -1,6 +1,6 @@
-import express from 'express';
-import http from 'http';
-import bodyParser from 'body-parser';
+var express = require('express');
+var http = require('http');
+var bodyParser = require('body-parser');
 
 let app = express();
 let server = http.Server(app);
