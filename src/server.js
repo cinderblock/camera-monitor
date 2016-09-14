@@ -14,18 +14,18 @@ let socketMode = process.env.npm_package_config_socketmode || process.env.socket
 let StartListening = server.listen.bind(
   server,
   listen,
-  hostname,
-  () => {
-    let addr = server.address();
-    if (addr.port && (addr.port > 0)) {
-      // listening on a port
-    } else {
-      // listening on a socket
-      if (socketMode) fs.chmodSync(addr, socketMode);
-    }
-    console.log('Listening at:', addr);
+  hostname);
+
+server.on('listening', () => {
+  let addr = server.address();
+  if (addr.port && (addr.port > 0)) {
+    // listening on a port
+  } else {
+    // listening on a socket
+    if (socketMode) fs.chmodSync(addr, socketMode);
   }
-);
+  console.log('Listening at:', addr);
+});
 
 server.on('error', err => {
   if (err.code == 'EADDRINUSE') {
