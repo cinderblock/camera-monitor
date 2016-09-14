@@ -25,7 +25,6 @@ server.on('error', err => {
       console.log(`Error: Address (${err.address} ${err.port}) already in use.`);
     } else if (err.address) {
       // Try to connect. If not running, remove and continue.
-
       var clientSocket = new net.Socket();
 
       clientSocket.on('error', e => {
