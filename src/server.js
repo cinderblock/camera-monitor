@@ -9,13 +9,21 @@ let server = http.Server(app);
 
 let listen = process.env.npm_package_config_socket || process.env.npm_package_config_port || process.env.npm_package_config_listen || 9000;
 let hostname = process.env.npm_package_config_hostname;
+let socketMode = process.env.npm_package_config_socketmode || process.env.socketmode;
 
 let StartListening = server.listen.bind(
   server,
   listen,
   hostname,
   () => {
-    console.log('Listening at:', server.address());
+    let addr = server.address();
+    if (addr.port && (addr.port > 0)) {
+      // listening on a port
+    } else {
+      // listening on a socket
+      if (socketMode) fs.chmodSync(addr, socketMode);
+    }
+    console.log('Listening at:', addr);
   }
 );
 
