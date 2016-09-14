@@ -1,3 +1,5 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry: './src/client.js',
     output: {
@@ -9,4 +11,9 @@ module.exports = {
             { test: /\.css$/, loader: 'style!css' },
         ],
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Webcam Monitor',
+        }),
+    ],
 };
