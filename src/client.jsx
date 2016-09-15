@@ -1,7 +1,9 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import MonitorContainer from './client/MonitorContainer.jsx';
+
 
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <MonitorContainer />,
   document.getElementById('container')
 );
