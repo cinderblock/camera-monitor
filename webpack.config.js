@@ -16,11 +16,13 @@ module.exports = {
             { test: /\.css$/, loader: 'style!css' },
             { test: /\.jsx?$/, loader: 'babel', exclude: node_modules },
             { test: /\.json$/, loader: 'json' },
+            { test: /\.pug$/, loader: 'pug' },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Webcam Monitor',
+            template: './src/index.pug',
         }),
     ],
     devServer: {
