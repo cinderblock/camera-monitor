@@ -11,6 +11,7 @@ module.exports = {
         loaders: [
             { test: /\.css$/, loader: 'style!css' },
             { test: /\.jsx?$/, loader: 'babel'},
+            { test: /\.json$/, loader: 'json' },
         ],
     },
     plugins: [
