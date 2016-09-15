@@ -6,7 +6,7 @@ const rsep = path.sep.replace(/\\/, '\\\\');
 const node_modules = new RegExp(`^${__dirname.replace(/\\/g, '\\\\')}${rsep}node_modules${rsep}`);
 
 module.exports = {
-    entry: './src/client.js',
+    entry: './src/client.jsx',
     output: {
         path: path.join(__dirname, 'webpack'),
         filename: 'bundle.js',
