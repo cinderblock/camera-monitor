@@ -8,6 +8,7 @@
     "main": "node .",
     "babel-build": "babel src/server.js -d babel",
     "postinstall": "npm run webpack",
+    "dev-server": "webpack-dev-server --hot",
     "webpack": "webpack"
   },
   "config": {
@@ -38,5 +39,8 @@
     "express": "^4.14.0",
     "html-webpack-plugin": "^2.22.0",
     "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^1.15.2"
   }
 }

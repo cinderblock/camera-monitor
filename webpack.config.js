@@ -19,4 +19,7 @@ module.exports = {
             title: 'Webcam Monitor',
         }),
     ],
+    devServer: {
+      inline: true,
+    },
 };
