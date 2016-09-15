@@ -1,6 +1,8 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
+const rsep = path.sep.replace(/\\/, '\\\\');
+
 module.exports = {
     entry: './src/client.js',
     output: {
@@ -10,7 +12,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.css$/, loader: 'style!css' },
-            { test: /\.jsx?$/, loader: 'babel', exclude: /[/\\]node_modules[/\\]/ },
+            { test: /\.jsx?$/, loader: 'babel', exclude: new RegExp(`${rsep}node_modules${rsep}`) },
             { test: /\.json$/, loader: 'json' },
         ],
     },
