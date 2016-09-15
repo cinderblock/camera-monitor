@@ -25,6 +25,7 @@ module.exports = {
             template: './src/index.pug',
         }),
     ],
+    devtool: 'eval-source-map',
     devServer: {
       inline: true,
     },
