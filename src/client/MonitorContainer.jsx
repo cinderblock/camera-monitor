@@ -1,6 +1,6 @@
 import React from 'react';
 
-class MonitorContainer extends React.Component {
+export default class MonitorContainer extends React.Component {
   render() {
     return (
       <div className="MonitorContainer">
@@ -9,5 +9,3 @@ class MonitorContainer extends React.Component {
     );
   }
 };
-
-export default MonitorContainer;
