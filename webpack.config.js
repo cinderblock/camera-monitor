@@ -22,7 +22,7 @@ module.exports = {
             { test: /\.pug$/, loader: 'pug' },
             { test: /\.(woff2?|svg)$/, loader: 'url?limit=10000' },
             { test: /\.(ttf|eot)$/, loader: 'file' },
-            { test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/, loader: 'imports?jQuery=jquery' },
+            { test: /bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/, loader: 'imports?jQuery=jquery' },
         ],
     },
     plugins: [
