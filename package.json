@@ -4,11 +4,11 @@
   "description": "A web interface for managing multiple network cameras",
   "main": "src/server.js",
   "scripts": {
-    "babel": "babel-watch .",
+    "serverDev": "babel-watch .",
+    "clientDev": "webpack-dev-server --hot",
     "main": "node .",
-    "babel-build": "babel src/server.js -d babel",
     "postinstall": "npm run webpack",
-    "dev-server": "webpack-dev-server --hot",
+    "babel-build": "babel src/server.js -d babel",
     "webpack": "webpack"
   },
   "config": {
