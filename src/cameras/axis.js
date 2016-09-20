@@ -4,7 +4,7 @@ function noop() {};
 
 module.exports = function (opts) {
   var camera = {};
-  var host = opts.url;
+  var host = opts.origin;
   var auth = opts.username ? 'Basic ' + new Buffer(opts.username + ':' + opts.password).toString('base64') : '';
 
   var headers = {};

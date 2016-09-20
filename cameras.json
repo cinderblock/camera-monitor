@@ -4,6 +4,6 @@
     "driver": "axis",
     "username": "user",
     "password": "password",
-    "url": "http://axis-camera:80"
+    "origin": "http://axis-camera:80"
   }
 ]
