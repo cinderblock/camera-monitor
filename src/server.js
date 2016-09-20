@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var net = require('net');
 var fs = require('fs');
 
+var cameras = require('./cameras.js');
+
 let app = express();
 let server = http.Server(app);
 

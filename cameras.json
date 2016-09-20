@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Axis Camera",
+    "driver": "axis",
+    "username": "user",
+    "password": "password",
+    "url": "http://axis-camera:80"
+  }
+]
