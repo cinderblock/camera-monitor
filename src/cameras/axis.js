@@ -47,5 +47,5 @@ module.exports = function (opts) {
     get('riris=' + level, cb || noop);
   };
 
-  return camera
+  return camera;
 };
