@@ -56,4 +56,14 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
+app.get('/cameras', function (req, res) {
+  let list = new Array(cameras.length);
+  for (let i = 0; i < cameras.length; i++) {
+    list[i] = {
+      name: cameras[i].options['name'],
+    };
+  }
+  res.json(list);
+});
+
 StartListening();
