@@ -7,7 +7,7 @@ export default {
     camerasFile: process.env.npm_package_config_camerasfile || '../cameras.json',
   },
   client: {
-    origin:
+    serverOrigin:
       process.env.npm_package_config_serverorigin ||
       (
         'http://' +
