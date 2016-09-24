@@ -64,6 +64,7 @@ app.get('/cameras', function (req, res) {
       driver: cameras[i].options.driver,
     };
   }
+  res.header('Access-Control-Allow-Origin', '*');
   res.json(list);
 });
 
