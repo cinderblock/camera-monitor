@@ -73,7 +73,7 @@ app.get('/camera/:cameraId/video', function (req, res) {
 });
 
 app.get('/camera/:cameraId/driver', function (req, res) {
-  cameras[parseInt(req.params.cameraId)].options.driver;
+  res.json(cameras[parseInt(req.params.cameraId)].options.driver);
 });
 
 StartListening();
