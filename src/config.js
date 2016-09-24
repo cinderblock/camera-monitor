@@ -12,6 +12,7 @@ export default {
       (
         'http://' +
         (process.env.npm_package_config_hostname || 'localhost') +
+        ':' +
         (process.env.npm_package_config_port || 9000)
       ),
   }
