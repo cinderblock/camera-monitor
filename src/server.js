@@ -66,4 +66,8 @@ app.get('/cameras', function (req, res) {
   res.json(list);
 });
 
+app.get('/camera/:cameraId/video', function (req, res) {
+  cameras[parseInt(req.params.cameraId)].camera.video().pipe(res);
+});
+
 StartListening();
