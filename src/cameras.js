@@ -2,9 +2,9 @@
 
 var Cameras = [];
 
-let camerasFile = process.env.npm_package_config_camerasfile || '../cameras.json';
+import config from '../config.js';
 
-require(camerasFile).forEach(options => {
+require(config.server.camerasFile).forEach(options => {
   Cameras.push({
     options,
     camera: new require(`./cameras/${options.driver}.js`)(options),

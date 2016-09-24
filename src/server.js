@@ -4,19 +4,16 @@ var bodyParser = require('body-parser');
 var net = require('net');
 var fs = require('fs');
 
+import config from './config.js';
 var cameras = require('./cameras.js');
 
 let app = express();
 let server = http.Server(app);
 
-let listen = process.env.npm_package_config_socket || process.env.npm_package_config_port || process.env.npm_package_config_listen || 9000;
-let hostname = process.env.npm_package_config_hostname;
-let socketMode = process.env.npm_package_config_socketmode || process.env.socketmode;
-
 let StartListening = server.listen.bind(
   server,
-  listen,
-  hostname);
+  config.server.listen,
+  config.server.hostname);
 
 server.on('listening', () => {
   let addr = server.address();
@@ -24,7 +21,7 @@ server.on('listening', () => {
     // listening on a port
   } else {
     // listening on a socket
-    if (socketMode) fs.chmodSync(addr, socketMode);
+    if (config.server.socketMode) fs.chmodSync(addr, config.server.socketMode);
   }
   console.log('Listening at:', addr);
 });
