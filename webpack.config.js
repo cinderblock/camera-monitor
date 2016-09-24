@@ -1,5 +1,6 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const config = require('./src/config.js');
 
 const rsep = path.sep.replace(/\\/, '\\\\');
 
@@ -35,5 +36,6 @@ module.exports = {
     devServer: {
       inline: true,
       hot: true,
+      headers: { 'Access-Control-Allow-Origin': config.client.serverOrigin },
     },
 };
