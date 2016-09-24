@@ -77,4 +77,34 @@ app.get('/camera/:cameraId/driver', function (req, res) {
   res.json(cameras[parseInt(req.params.cameraId)].options.driver);
 });
 
+app.get('/camera/:cameraId/up', function (req, res) {
+  cameras[parseInt(req.params.cameraId)].camera.up();
+  res.header('Access-Control-Allow-Origin', '*');
+  res.send();
+});
+
+app.get('/camera/:cameraId/down', function (req, res) {
+  cameras[parseInt(req.params.cameraId)].camera.down();
+  res.header('Access-Control-Allow-Origin', '*');
+  res.send();
+});
+
+app.get('/camera/:cameraId/left', function (req, res) {
+  cameras[parseInt(req.params.cameraId)].camera.left();
+  res.header('Access-Control-Allow-Origin', '*');
+  res.send();
+});
+
+app.get('/camera/:cameraId/right', function (req, res) {
+  cameras[parseInt(req.params.cameraId)].camera.right();
+  res.header('Access-Control-Allow-Origin', '*');
+  res.send();
+});
+
+app.get('/camera/:cameraId/zoom/:level', function (req, res) {
+  cameras[parseInt(req.params.cameraId)].camera.zoom(req.params.level);
+  res.header('Access-Control-Allow-Origin', '*');
+  res.send();
+});
+
 StartListening();
