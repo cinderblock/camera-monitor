@@ -2,7 +2,7 @@
 
 var Cameras = [];
 
-import config from './config.js';
+var config = require('./config.js');
 
 require(config.server.camerasFile).forEach(options => {
   let Camera = require(`./cameras/${options.driver}.js`);
