@@ -61,6 +61,7 @@ app.get('/cameras', function (req, res) {
   for (let i = 0; i < cameras.length; i++) {
     list[i] = {
       name: cameras[i].options.name,
+      driver: cameras[i].options.driver,
     };
   }
   res.json(list);
@@ -68,6 +69,10 @@ app.get('/cameras', function (req, res) {
 
 app.get('/camera/:cameraId/video', function (req, res) {
   cameras[parseInt(req.params.cameraId)].camera.video().pipe(res);
+});
+
+app.get('/camera/:cameraId/driver', function (req, res) {
+  cameras[parseInt(req.params.cameraId)].options.driver;
 });
 
 StartListening();
