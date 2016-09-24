@@ -73,6 +73,7 @@ app.get('/camera/:cameraId/video', function (req, res) {
 });
 
 app.get('/camera/:cameraId/driver', function (req, res) {
+  res.header('Access-Control-Allow-Origin', '*');
   res.json(cameras[parseInt(req.params.cameraId)].options.driver);
 });
 
