@@ -7,7 +7,7 @@ var config = {
     camerasFile: process.env.npm_package_config_camerasfile || '../cameras.json',
   },
   client: {
-    serverOrigin:
+    serverOrigin: process.env.npm_package_config_serverorigin === '' ? '' :
       process.env.npm_package_config_serverorigin ||
       (
         'http://' +
