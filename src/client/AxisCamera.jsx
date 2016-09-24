@@ -8,6 +8,7 @@ export default class AxisCamera extends React.Component {
   render() {
     return (
       <div className="axisCamera">
+        <img src={this.props.origin + '/video'} />
         <Button>Up</Button>
       </div>
     );
