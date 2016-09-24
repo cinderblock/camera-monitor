@@ -1,5 +1,5 @@
 
-export default {
+var config = {
   server: {
     listen: process.env.npm_package_config_socket || process.env.npm_package_config_port || 9000,
     hostname: process.env.npm_package_config_hostname,
@@ -17,3 +17,5 @@ export default {
       ),
   }
 };
+
+module.exports = config;
