@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var net = require('net');
 var fs = require('fs');
 
-import config from './config.js';
+var config = require('./config.js');
 var cameras = require('./cameras.js');
 
 let app = express();
