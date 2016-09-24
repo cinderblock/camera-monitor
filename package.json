@@ -58,6 +58,7 @@
   },
   "devDependencies": {
     "babel-watch": "^2.0.3-rc0",
+    "eslint": "^3.6.0",
     "webpack-dev-server": "^1.15.2"
   }
 }
