@@ -9,7 +9,9 @@
     "main": "node .",
     "postinstall": "npm run webpack",
     "babel-build": "babel src/server.js -d babel",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -52,11 +54,13 @@
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-watch": "^2.0.3-rc0",
     "eslint": "^3.6.0",
     "webpack-dev-server": "^1.15.2"
-  }
+  },
+  "snyk": true
 }
